@@ -18,7 +18,7 @@ function addTask(title) {
     const task = { isDone: false }
 
     // やることのタイトルを設定(このままだと、すべてのタイトルがHello Worldになってしまう！)
-    task.title = "Hello World"
+    task.title =  title
 
     // 以降は無視して良い
     tasks.push(task);
@@ -41,7 +41,7 @@ function addTask(title) {
  */
 function onUpdateIsDone(task) {
     console.log("チェックボックスがクリックされました。", task);
-
+    
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
     const currentValue = !task.isDone;//task.isDoneの前に!を追加//
     task.isDone = currentValue;
