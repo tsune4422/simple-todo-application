@@ -44,7 +44,7 @@ function onUpdateIsDone(task) {
     
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
 
-    const currentValue = task.isDone;
+    const currentValue = !task.isDone;//task.isDoneの前に!を追加//
     task.isDone = currentValue;
 
     return task;
@@ -68,7 +68,7 @@ function onTaskTitleClicked(task) {
     console.log("タイトルがクリックされました。", task);
 
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
-    const currentValue = task.isDone;
+    const currentValue = !task.isDone;//task.isDoneの前に!を追加//
     task.isDone = currentValue;
 
     return task;
